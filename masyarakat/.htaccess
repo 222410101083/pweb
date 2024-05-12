@@ -1,0 +1,6 @@
+RewriteEngine On
+# Jika direktori atau file yang diminta tidak ada, arahkan ke login.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+RewriteRule ^$ index.php [L]
